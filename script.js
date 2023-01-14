@@ -7,19 +7,27 @@ let errorDisplay = document.getElementsByClassName("Errordisplay")
 let AllareFilled = document.getElementById("iftrue"); // the green line
 let NotAllareFilled = document.getElementById("ifFalse");  //the red line to show 
 
-btnAdd.addEventListener('click' , (validation,addData));
+// delete button
+
+let idNumber = document.getElementById("inputID");
+let deleteBtn = document.getElementById("delete");
+
+btnAdd.addEventListener('click' , validation);
 
 // check wheather all field are filled or not 
 
 function validation(){
-    if(Name.value =="" || profession.value == "" || age.value == ""){
+    if(Name.value == "" || profession.value == "" || age.value == ""){
         NotAllareFilled.style.display = "block"
-        AllareFilled.style.display = "none"
+        AllareFilled.style.display = "none" 
         
     }
     else{
         AllareFilled.style.display = "block"
         NotAllareFilled.style.display = "none"
+
+
+        addData();
     }
 }
 
@@ -34,6 +42,7 @@ function validation(){
     function addData(){
 
         var table = document.getElementById("table");
+
         var newRow = table.insertRow();
 
         list1[x] = id++;
@@ -55,4 +64,10 @@ function validation(){
         x++;      
         
     }
-   
+
+
+//    deleteBtn.addEventListener("click" , deleteRowNo);
+
+//    function deleteRowNo(){
+//         newRow.
+//    }
