@@ -15,26 +15,13 @@ function validation(){
     if(Name.value =="" || profession.value == "" || age.value == ""){
         NotAllareFilled.style.display = "block"
         AllareFilled.style.display = "none"
+        
     }
     else{
         AllareFilled.style.display = "block"
         NotAllareFilled.style.display = "none"
     }
 }
-
-// let empData = [];
-// let id = 0;
-// function  addData(){
-//     let newobject = {
-//         id: id++,
-//         name:Name.value,
-//         profession:profession.value,
-//         age:age.value 
-//     }
-
-//     empData.push(newobject)
-//     console.log(empData)
-// }
 
     var list1 = [];
     var list2 = [];
@@ -43,13 +30,13 @@ function validation(){
 
     var n = 0;
     var x = 0;
-    let id = 0;
+    let id = 1;
     function addData(){
 
         var table = document.getElementById("table");
         var newRow = table.insertRow();
 
-        list1[x] = id;
+        list1[x] = id++;
         list2[x] = Name.value;
         list3[x] = profession.value;
         list4[x] = age.value;
@@ -65,6 +52,7 @@ function validation(){
         cell4.innerHTML = list4[x];
 
         n++;
-        x++;       
+        x++;      
+        
     }
-    id++;
+   
