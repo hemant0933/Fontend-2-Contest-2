@@ -66,8 +66,18 @@ function validation(){
     }
 
 
-//    deleteBtn.addEventListener("click" , deleteRowNo);
+   deleteBtn.addEventListener("click" , deleteRowNo);
 
-//    function deleteRowNo(){
-//         newRow.
-//    }
+   function deleteRowNo(){
+        if(idNumber.value == list1.id){
+            list1[x] = ""
+            list2[x] = ""
+            list3[x] = ""
+            list4[x] = "" 
+
+        cell1.innerHTML = list1[x];
+        cell2.innerHTML = list2[x];
+        cell3.innerHTML = list3[x];
+        cell4.innerHTML = list4[x];
+        }
+   }
