@@ -1,0 +1,23 @@
+body{
+    background: #000;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+#heading{
+    color: white;
+}
+
+label{
+    color: white;
+}
+/* .Errordisplay{
+    margin-left: ;
+} */
+#iftrue{
+    display: none;
+    color: greenyellow;
+}
+#ifFalse{
+    display: none;
+    color: red;
+}
